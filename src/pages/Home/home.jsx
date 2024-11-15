@@ -80,6 +80,8 @@ export const Home = () => {
         </Stack>
       </Container>
 
+
+
       <Stack bgcolor={"#00CBFE"} mb={"60px"}>
         <Container maxWidth={"xs"}>
           <Typography
