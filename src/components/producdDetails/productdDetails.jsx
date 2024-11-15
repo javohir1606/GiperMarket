@@ -2,10 +2,19 @@ import React from "react";
 import { useParams } from "react-router";
 import { useGetSinglePhone } from "../../pages/Home/query/useGetSinglePhone";
 
-export const ProductdDetails = () => {
+export const ProductDetails = () => {
   const { id } = useParams();
-
   const { data } = useGetSinglePhone(parseInt(id));
 
-  return <>{data && <h1>{data.title}</h1>}</>;
+  return (
+    <>
+      {data && (
+        <>
+          <img src={data.img} alt={data.title} />
+          <h1>{data.title}</h1>
+        </>
+      )}
+    </>
+  );
 };
+
