@@ -1,9 +1,11 @@
 import { useQuery } from "react-query";
 import { request } from "../../../config/request";
 
-export const useGetSinglePhone = () => {
+export const useGetSinglePhone = (id) => {
   return useQuery({
-    queryKey: ["singleData"],
-    queryFn: (id) => request.get(`/phones/${id}`).then((res) => res.data),
+    queryKey: ["singleData", id], 
+    queryFn: () => {
+      return request.get(`/phones/${id}`).then((res) => res.data);
+    }
   });
 };

@@ -1,14 +1,11 @@
+import React from "react";
+import { useParams } from "react-router";
 import { useGetSinglePhone } from "../../pages/Home/query/useGetSinglePhone";
 
-export const ProductdDetails = ({ id }) => {
-  const { data, isLoading, isError } = useGetSinglePhone(id);
+export const ProductdDetails = () => {
+  const { id } = useParams();
 
-  if (isLoading) return <p>Loading...</p>;
-  if (isError) return <p>Error loading phone data</p>;
+  const { data } = useGetSinglePhone(parseInt(id));
 
-  return (
-    <div>
-      <h1>{data.title}</h1>
-    </div>
-  );
+  return <>{data && <h1>{data.title}</h1>}</>;
 };
