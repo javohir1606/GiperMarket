@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import { MainLayout } from "./layout/main-layout";
 import { Home } from "./pages/Home/Home";
 import KorzinkaCard from "./korzinka/korzinka";
-import ProductdDetails from "./components/producdDetails/productdDetails";
+import { ProductdDetails } from "./components/producdDetails/productdDetails";
 
 
 function App() {
