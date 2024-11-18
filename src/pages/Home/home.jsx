@@ -17,7 +17,6 @@ import { PhoneCard } from "../../components/phone/phone";
 import { useGetNotebook } from "./query/useGetnooutbok";
 import { useGetBanner } from "./query/useGetBarend";
 import { BarendCard } from "../../components/barend/barend";
-import KorzinkaCard from "../../korzinka/korzinka";
 
 export const Home = () => {
   const { data } = useGetCatalog();

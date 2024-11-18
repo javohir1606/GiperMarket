@@ -19,7 +19,7 @@ export const useGetSinglePhone = (id) => {
   return useQuery({
     queryKey: ["singleData", id], 
     queryFn: () => {
-      console.log(`${id}`); 
+      // console.log(`${id}`); 
       return request.get(`/phones/${id}`).then((res) => res.data);
     }
   });
