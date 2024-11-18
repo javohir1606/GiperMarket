@@ -59,12 +59,14 @@ export const Header = () => {
             </IconButton>
             <Typography fontWeight={"400"} fontSize={"16px"} color="#333">Войти</Typography>
           </Stack>
+          
           <Stack>
             <IconButton>
               <LikeIcon />
             </IconButton>
             <Typography fontWeight={"400"} fontSize={"16px"} color="#333">Избранное</Typography>
           </Stack>
+
           <Stack textAlign={"center"}>
             <Link to="korzinka" style={{ textDecoration: "none" }}>
               <IconButton>
