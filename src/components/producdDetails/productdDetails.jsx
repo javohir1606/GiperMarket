@@ -34,7 +34,7 @@ export const ProductDetails = () => {
 
   const handleRemoveFromCart = () => {
     setInCart(false);
-    setQuantity(1);  // Reset quantity to 1 when removing the item
+    setQuantity(1); // Reset quantity to 1 when removing the item
   };
 
   return (
@@ -46,7 +46,11 @@ export const ProductDetails = () => {
             <Stack direction={"row"} alignItems={"center"} gap={"50px"}>
               <Stack direction={"row"} alignItems={"center"} gap={"12px"}>
                 <Rating name="read-only" value={5} readOnly></Rating>
-                <Typography fontWeight={"400"} fontSize={"16px"} color="#76bc21">
+                <Typography
+                  fontWeight={"400"}
+                  fontSize={"16px"}
+                  color="#76bc21"
+                >
                   (0)
                 </Typography>
               </Stack>
@@ -58,7 +62,12 @@ export const ProductDetails = () => {
               </Stack>
             </Stack>
           </Stack>
-          <Box mb={"24px"} width={"1190px"} height={"1px"} bgcolor={"#ededed"}></Box>
+          <Box
+            mb={"24px"}
+            width={"1190px"}
+            height={"1px"}
+            bgcolor={"#ededed"}
+          ></Box>
 
           <Stack direction={"row"} justifyContent={"space-between"}>
             <Stack direction={"row"} gap={"32px"}>
@@ -71,22 +80,52 @@ export const ProductDetails = () => {
                 />
               </Stack>
               <Stack>
-                <Typography mb={"8px"} fontWeight={"500"} fontSize={"16px"} color="#333">
+                <Typography
+                  mb={"8px"}
+                  fontWeight={"500"}
+                  fontSize={"16px"}
+                  color="#333"
+                >
                   Объем памяти
                 </Typography>
-                <Typography mb={"24px"} fontWeight={"400"} fontSize={"16px"} color="#333">
+                <Typography
+                  mb={"24px"}
+                  fontWeight={"400"}
+                  fontSize={"16px"}
+                  color="#333"
+                >
                   {data.rame}
                 </Typography>
-                <Typography mb={"16px"} fontWeight={"500"} fontSize={"16px"} color="#333">
+                <Typography
+                  mb={"16px"}
+                  fontWeight={"500"}
+                  fontSize={"16px"}
+                  color="#333"
+                >
                   Характеристики
                 </Typography>
-                <Typography mb={"16px"} fontWeight={"400"} fontSize={"16px"} color="#999">
+                <Typography
+                  mb={"16px"}
+                  fontWeight={"400"}
+                  fontSize={"16px"}
+                  color="#999"
+                >
                   Цвет:<span style={{ color: "#333" }}> {data.color}</span>
                 </Typography>
-                <Typography mb={"16px"} fontWeight={"400"} fontSize={"16px"} color="#999">
+                <Typography
+                  mb={"16px"}
+                  fontWeight={"400"}
+                  fontSize={"16px"}
+                  color="#999"
+                >
                   память:<span style={{ color: "#333" }}> {data.rame}</span>
                 </Typography>
-                <Typography mb={"16px"} fontWeight={"400"} fontSize={"16px"} color="#999">
+                <Typography
+                  mb={"16px"}
+                  fontWeight={"400"}
+                  fontSize={"16px"}
+                  color="#999"
+                >
                   brand:<span style={{ color: "#333" }}> {data.brand}</span>
                 </Typography>
                 <Typography fontWeight={"500"} fontSize={"16px"} color="red">
