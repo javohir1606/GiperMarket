@@ -1,15 +1,22 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
 import React from "react";
 import { Korzinka } from "../../assets/icon/korzinka";
 import { Link } from "react-router-dom";
+import { LikeIcon } from "../../assets/icon/likeIcon";
 
 export const ProductCard = (item) => {
   return (
-    <Stack width={"241px"}>
+    <Stack
+      width={"241px"}
+      height={"323px"}
+      gap={"15px"}
+      alignItems={"center"}
+      padding={"10px"}
+    >
       <Box sx={{ textAlign: "center" }}>
         <img style={{ width: "165px" }} src={item.img} alt="img" />
       </Box>
-      <Stack>
+      <Stack position={"relative"}>
         <Link to={`/detail/${item.id}`} style={{ textDecoration: "none" }}>
           <Typography
             fontWeight={400}
@@ -29,7 +36,7 @@ export const ProductCard = (item) => {
         >
           {item.rame}
         </Typography>
-        <Stack mt={"24px"} direction={"row"} justifyContent={"space-between"}>
+        <Stack mt={"24px"} gap={"15px"} alignItems={"center"} direction={"row"} justifyContent={"space-between"}>
           <Typography fontWeight={600} fontSize={"18px"} color="#333">
             {item.price} Сум
           </Typography>
@@ -37,6 +44,11 @@ export const ProductCard = (item) => {
           <Button variant="contained">
             <Korzinka />
           </Button>
+          <Stack position={"absolute"} top={"-180px"} right={"-15px"}>
+            <IconButton>
+              <LikeIcon />
+            </IconButton>
+          </Stack>
         </Stack>
       </Stack>
     </Stack>

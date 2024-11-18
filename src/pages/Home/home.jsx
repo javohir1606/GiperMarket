@@ -56,6 +56,7 @@ export const Home = () => {
         </Stack>
       </Container>
 
+
       <Container
         maxWidth="xs"
         sx={{ pt: "16px", pb: "48px", position: "relative" }}
@@ -79,7 +80,7 @@ export const Home = () => {
         </Stack>
       </Container>
 
-
+      
 
       <Stack bgcolor={"#00CBFE"} mb={"60px"}>
         <Container maxWidth={"xs"}>

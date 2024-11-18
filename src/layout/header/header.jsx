@@ -14,7 +14,6 @@ import logo from "../../assets/img/logo.svg";
 import { Korzinka } from "../../assets/icon/korzinka";
 import { LikeIcon } from "../../assets/icon/likeIcon";
 import { Link } from "react-router-dom";
-
 export const Header = () => {
   return (
     <Container maxWidth="xs" sx={{ pb: "18px" }}>
@@ -58,20 +57,20 @@ export const Header = () => {
             <IconButton>
               <Profile />
             </IconButton>
-            <Typography>Войти</Typography>
+            <Typography fontWeight={"400"} fontSize={"16px"} color="#333">Войти</Typography>
           </Stack>
           <Stack>
             <IconButton>
               <LikeIcon />
             </IconButton>
-            <Typography>Избранное</Typography>
+            <Typography fontWeight={"400"} fontSize={"16px"} color="#333">Избранное</Typography>
           </Stack>
-          <Stack>
-            <Link to='korzinka' style={{textDecoration: 'none'}}>
+          <Stack textAlign={"center"}>
+            <Link to="korzinka" style={{ textDecoration: "none" }}>
               <IconButton>
                 <Korzinka />
               </IconButton>
-              <Typography>Корзина</Typography>
+              <Typography fontWeight={"400"} fontSize={"16px"} color="#333">Корзина</Typography>
             </Link>
           </Stack>
         </Stack>
