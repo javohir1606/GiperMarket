@@ -25,17 +25,6 @@ export const Home = () => {
   const { data: notebook } = useGetNotebook();
   const { data: brand } = useGetBanner();
 
-  // const [cart, setCart] = useState([]);
-
-  // // Savatga mahsulot qo'shish funksiyasi
-  // const addToCart = (id) => {
-  //   const product = phone.find((item) => item.id === id);
-  //   if (product) {
-  //     setCart([...cart, product]);
-  //     console.log("Savatga qo'shildi:", product);
-  //   }
-  // };
-
   return (
     <Box>
       <Banner />
