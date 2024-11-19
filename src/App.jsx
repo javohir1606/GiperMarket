@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router";
 import { MainLayout } from "./layout/main-layout";
-import { Home } from "./pages/Home/Home";
 import KorzinkaCard from "./korzinka/korzinka";
 import {ProductDetails} from "./components/producdDetails/productdDetails"
 import { HomePage } from "./components/HomePage/HomePage";
+import { Home } from "./pages/Home/home";
 
 
 function App() {

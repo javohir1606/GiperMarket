@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
 import { useGetSinglePhone } from "../../pages/Home/query/useGetSinglePhone";
+import { useGetSingleNotebook } from "../../pages/Home/query/useGetNootbooks";
 import {
   Box,
   Button,
@@ -14,6 +15,9 @@ import { LikeIcon } from "../../assets/icon/likeIcon";
 export const ProductDetails = () => {
   const { id } = useParams();
   const { data } = useGetSinglePhone(parseInt(id));
+  
+  
+
 
   const [inCart, setInCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -34,7 +38,7 @@ export const ProductDetails = () => {
 
   const handleRemoveFromCart = () => {
     setInCart(false);
-    setQuantity(1); 
+    setQuantity(1);
   };
 
   return (
