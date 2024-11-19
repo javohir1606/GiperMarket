@@ -57,14 +57,18 @@ export const Header = () => {
             <IconButton>
               <Profile />
             </IconButton>
-            <Typography fontWeight={"400"} fontSize={"16px"} color="#333">Войти</Typography>
+            <Typography fontWeight={"400"} fontSize={"16px"} color="#333">
+              Войти
+            </Typography>
           </Stack>
-          
+
           <Stack>
             <IconButton>
               <LikeIcon />
             </IconButton>
-            <Typography fontWeight={"400"} fontSize={"16px"} color="#333">Избранное</Typography>
+            <Typography fontWeight={"400"} fontSize={"16px"} color="#333">
+              Избранное
+            </Typography>
           </Stack>
 
           <Stack textAlign={"center"}>
@@ -72,7 +76,9 @@ export const Header = () => {
               <IconButton>
                 <Korzinka />
               </IconButton>
-              <Typography fontWeight={"400"} fontSize={"16px"} color="#333">Корзина</Typography>
+              <Typography fontWeight={"400"} fontSize={"16px"} color="#333">
+                Корзина
+              </Typography>
             </Link>
           </Stack>
         </Stack>
