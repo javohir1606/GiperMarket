@@ -17,6 +17,7 @@ import { PhoneCard } from "../../components/phone/phone";
 import { useGetNotebook } from "./query/useGetnooutbok";
 import { useGetBanner } from "./query/useGetBarend";
 import { BarendCard } from "../../components/barend/barend";
+import { Product } from "../../../product";
 
 export const Home = () => {
   const { data } = useGetCatalog();
@@ -28,6 +29,8 @@ export const Home = () => {
   return (
     <Box>
       <Banner />
+
+      
       <Container maxWidth="xs">
         <Stack direction={"row"} alignItems={"center"} mx={"43px"} py={"32px"}>
           <Swiper
@@ -46,6 +49,8 @@ export const Home = () => {
       </Container>
 
 
+
+
       <Container
         maxWidth="xs"
         sx={{ pt: "16px", pb: "48px", position: "relative" }}
@@ -61,7 +66,7 @@ export const Home = () => {
             >
               {phone?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <ProductCard {...item} addToCart={() => addToCart(item.id)} />
+                  <Product {...item} addToCart={() => addToCart(item.id)} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -157,7 +162,7 @@ export const Home = () => {
             >
               {phone?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <ProductCard {...item} />
+                  <Product {...item} />
                 </SwiperSlide>
               ))}
             </Swiper>
