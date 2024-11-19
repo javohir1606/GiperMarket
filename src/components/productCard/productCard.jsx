@@ -1,10 +1,17 @@
+import React, { useState } from "react";
 import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
-import React from "react";
 import { Korzinka } from "../../assets/icon/korzinka";
 import { Link } from "react-router-dom";
 import { LikeIcon } from "../../assets/icon/likeIcon";
 
 export const ProductCard = (item) => {
+  const [cartItems, setCartItems] = useState([]); 
+
+  const handleAddToCart = () => {
+    setCartItems((prevItems) => [...prevItems, item]); 
+    console.log(`${item.title} korzinkaga qo'shildi!`);
+  };
+
   return (
     <Stack
       width={"241px"}
@@ -36,12 +43,18 @@ export const ProductCard = (item) => {
         >
           {item.rame}
         </Typography>
-        <Stack mt={"24px"} gap={"15px"} alignItems={"center"} direction={"row"} justifyContent={"space-between"}>
+        <Stack
+          mt={"24px"}
+          gap={"15px"}
+          alignItems={"center"}
+          direction={"row"}
+          justifyContent={"space-between"}
+        >
           <Typography fontWeight={600} fontSize={"18px"} color="#333">
             {item.price} Сум
           </Typography>
 
-          <Button variant="contained">
+          <Button variant="contained" onClick={handleAddToCart}>
             <Korzinka />
           </Button>
           <Stack position={"absolute"} top={"-180px"} right={"-15px"}>
