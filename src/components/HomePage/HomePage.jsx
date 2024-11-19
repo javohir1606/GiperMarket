@@ -1,4 +1,4 @@
-import { Button, Container, Grid2, Stack, Typography } from "@mui/material";
+import { Button, Container, Grid2, Stack, Typography, Tooltip } from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useSingleCatalog } from "../../pages/Home/query/useSingilCatolog";
@@ -10,9 +10,9 @@ export const HomePage = () => {
   console.log(data);
 
   return (
-    <Container>
-      <Stack>
-        <Grid2 container spacing={2} justifyContent="center">
+    <Container maxWidth="xs">
+      <Stack direction={"row"}>
+        <Grid2 container spacing={2}>
           {data?.map((item) => (
             <Grid2 xs={12} sm={6} md={3} key={item.id}>
               <Stack
@@ -20,12 +20,14 @@ export const HomePage = () => {
                 height={"323px"}
                 spacing={2}
                 bgcolor={"#fff"}
-                padding={"10px"}
+                padding={"5px"}
                 sx={{
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
                   borderRadius: "8px",
                 }}
               >
+                <Stack textAlign={"center"} justifyContent={"center"}>
+
                 <img
                   src={item.img}
                   alt="img"
@@ -35,14 +37,24 @@ export const HomePage = () => {
                     height: "165px",
                   }}
                 />
-                <Typography
-                  width={"157px"}
-                  fontWeight={"400"}
-                  fontSize={"16px"}
-                  color="#333"
-                >
-                  {item.title}
-                </Typography>
+                </Stack>
+                <Tooltip title={item.title} arrow>
+                  <Typography
+                    width={"157px"}
+                    fontWeight={"400"}
+                    fontSize={"16px"}
+                    color="#333"
+                    sx={{
+                      display: "-webkit-box",
+                      overflow: "hidden",
+                      WebkitBoxOrient: "vertical",
+                      WebkitLineClamp: 1, 
+                      textOverflow: "ellipsis", 
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                </Tooltip>
                 <Stack
                   direction={"row"}
                   alignItems={"center"}
