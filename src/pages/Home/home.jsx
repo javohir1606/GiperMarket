@@ -17,7 +17,6 @@ import { PhoneCard } from "../../components/phone/phone";
 import { useGetNotebook } from "./query/useGetnooutbok";
 import { useGetBanner } from "./query/useGetBarend";
 import { BarendCard } from "../../components/barend/barend";
-import { Product } from "../../../product";
 
 export const Home = () => {
   const { data } = useGetCatalog();
@@ -50,7 +49,6 @@ export const Home = () => {
 
 
 
-
       <Container
         maxWidth="xs"
         sx={{ pt: "16px", pb: "48px", position: "relative" }}
@@ -66,7 +64,7 @@ export const Home = () => {
             >
               {phone?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <Product {...item} addToCart={() => addToCart(item.id)} />
+                  <ProductCard {...item} addToCart={() => addToCart(item.id)} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -98,6 +96,8 @@ export const Home = () => {
           </Grid2>
         </Container>
       </Stack>
+
+
       <Container maxWidth={"xs"}>
         <Stack direction={"row"} gap={"34px"}>
           <Stack>
@@ -147,6 +147,8 @@ export const Home = () => {
           </Stack>
         </Stack>
       </Container>
+
+
       <Container
         maxWidth="xs"
         sx={{ pt: "16px", pb: "48px", position: "relative" }}
@@ -162,13 +164,15 @@ export const Home = () => {
             >
               {phone?.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <Product {...item} />
+                  <ProductCard {...item} />
                 </SwiperSlide>
               ))}
             </Swiper>
           </Stack>
         </Stack>
       </Container>
+
+
       <Container
         maxWidth="xs"
         sx={{ pt: "16px", pb: "48px", position: "relative" }}
@@ -191,6 +195,8 @@ export const Home = () => {
           </Stack>
         </Stack>
       </Container>
+
+
       <Container maxWidth={"xs"}>
         <Stack mb={"100px "}>
           <Typography
@@ -210,6 +216,8 @@ export const Home = () => {
           </Grid2>
         </Stack>
       </Container>
+
+
     </Box>
   );
 };

@@ -1,10 +1,12 @@
-import React from 'react'
+import { Stack } from "@mui/material";
+import React from "react";
 
 export const HomePage = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
-
+    <>
+      <Stack>
+        
+      </Stack>
+    </>
+  );
+};
