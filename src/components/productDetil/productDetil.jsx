@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useParams } from "react-router";
-import { useGetSinglePhone } from "../../pages/Home/query/useGetSinglePhone";
-
+import { useGetSingleNotebook } from "../../pages/Home/query/useGetNootbooks";
 import {
   Box,
   Button,
@@ -17,7 +16,7 @@ export const ProductDetails = () => {
   const location = useLocation();
   console.log(location);
 
-  const { data, isLoading, error } = useGetSinglePhone(parseInt(id));
+  const { data, isLoading, error } = useGetSingleNotebook(parseInt(id));
 
   const [inCart, setInCart] = useState(false);
   const [quantity, setQuantity] = useState(1);
